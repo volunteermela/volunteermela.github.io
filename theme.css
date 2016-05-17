@@ -311,10 +311,14 @@ nav ul a:hover {
   height: 50vh;
   background-color: #0d47a1;
   color: white;
-  padding: 10%; }
+  padding: 10%;
+  overflow: scroll; }
   .coach-bio p {
     margin: 0;
     text-transform: none; }
+  @media only screen and (max-width: 500px) {
+    .coach-bio {
+      padding: 10px; } }
 
 .coach-bio-container {
   padding: 50px; }

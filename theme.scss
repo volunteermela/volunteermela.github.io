@@ -386,9 +386,13 @@ nav ul a:hover {
 	background-color: $dark-blue;
 	color: white;
 	padding: 10%;
+	overflow: scroll;
 	p {
 		margin: 0;
 		text-transform: none;
+	}
+	@media only screen and (max-width: 500px) {
+		padding: 10px;
 	}
 }
 .coach-bio-container {
