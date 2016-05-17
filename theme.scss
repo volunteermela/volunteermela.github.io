@@ -1,0 +1,491 @@
+//keyframes
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+@keyframes run {
+    0% {left: 0;}
+    100% {left: 90%;}
+}
+
+@keyframes slideUp {
+	0%   {top: 20%; opacity: 0;}
+    50%  {top: 10%; opacity: 0.7;}
+    100% {top: 0%; opacity: 1;}
+}
+
+@keyframes coachUp {
+	0%   {top: 50vh;}
+    //50%  {top: 25vh;}
+    100% {top: 0;}
+}
+
+@-webkit-keyframes coachUp {
+	0%   {top: 50vh;}
+    //50%  {top: 25vh;}
+    100% {top: 0;}
+}
+
+@-webkit-keyframes slideUp {
+	0%   {top: 20%; opacity: 0;}
+    50%  {top: 10%; opacity: 0.7;}
+    100% {top: 0%; opacity: 1;}
+}
+
+.slideUp{
+	position: relative;
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+	//animation-delay: 1s;
+	visibility: visible;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.visible {
+	opacity: 1;
+}
+//clearfix
+//clearfix
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+
+//mixins
+@mixin fade-bg {
+	-webkit-transition: background 0.4s linear;
+    -moz-transition: background 0.4s linear;
+    -ms-transition: background 0.4s linear;
+    -o-transition: background 0.4s linear;
+    transition: background 0.4s linear;
+}
+
+//variables
+$font-hd: 'Fjalla One', sans-serif;
+$font-body: 'Cantarell', sans-serif;
+$font-try:'Open Sans', sans-serif;
+
+$lt-blue: #8DB5E2;
+$dark-blue: #0d47a1;
+$lt-gray: #bdbdbd;
+$dark-gray: #424242;
+$black: #000;
+$white: #fff;
+$white-border: 2px solid #fff;
+$black-border: 2px solid #000;
+
+//buttons
+.btn-left {
+	margin-right: 10px;
+}
+.btn-right {
+	margin-left: 10px;
+}
+
+#loading-wrapper {
+	background: black;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+}
+
+#player-wrapper {
+	position: absolute;
+	bottom: 40%;
+	animation-name: run;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    transform: scale(1.1); 
+	img {
+		width: 150px;
+	}
+}
+
+//Classes to vertically center things
+.vertical-center {
+   display: flex;
+  justify-content: center;
+}
+
+.vertical-center--child {
+  align-self: center;
+}
+
+//NAVBAR
+nav {
+	background-color: transparent;
+	color: white;
+	box-shadow: none;
+	font-family: $font-hd;
+	.nav-wrapper {
+		padding: 0 10px;
+		text-align: center;
+		ul {
+			display: inline-block;
+			a {
+				font-size: 20px;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	a, li {
+		text-transform: uppercase;
+	}
+}
+
+//override materialize shadow cast
+nav ul a:hover {
+	background: none;
+}
+
+.btn-apply {
+	margin-left: 15px;
+	font-size: 20px;
+	color: #fff;
+	float: right;
+	@include fade-bg;
+	&:hover {
+		background-color: white;
+		color: #000;
+	}
+}
+
+.btn-apply-inverse {
+	color: $black;
+	background-color: $lt-blue;
+	&:hover {
+		background: black;
+		color: $lt-blue !important;
+	}
+}
+.nav-down {
+	background-color: white;
+	color: $lt-blue;
+}
+
+//logo in navbar
+#nav-logo {
+	width: 30px;
+	position: relative;
+	top: 10px;
+}
+
+.btn-apply {
+	border: 2px solid #fff;
+	border-radius: 21px;
+}
+
+#brand-logo {
+	display: inline-block;
+	margin-right: 15px;
+	font-size: 20px;
+	float: left;
+	@media only screen and (max-width: 500px) {
+		float: none;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+#brand-logo-inverse {
+	color: $black;
+}
+
+.nav-inital {
+	background-color: black;
+	color: white;
+	box-shadow: none;
+	a {
+		color: white;
+	}
+}
+
+.link-scroll {
+	color: $lt-blue !important;
+}
+
+//LANDING PAGE
+.landing-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(landing-blur2.png);
+  //background: $lt-blue;
+  background-size: cover;
+  background-position: center;
+  font-family: $font-hd;
+  color: white;
+  text-align: center;
+  h1,h3 {
+  	text-align: center;
+  	text-transform: uppercase;
+  	color: white;
+  }
+  h4 {
+  	font-family: $font-hd;
+  	@media only screen and (min-width: 600px) {
+		margin-top: 50px;
+	}
+  }
+  h1 {
+  	font-size: 5rem;
+  }
+}
+
+.camp-info {
+	max-width: 625px;
+	//@include slideUp;
+}
+
+.landing-info {
+	display: block;
+	margin: 0 auto;
+	color: black;
+	font-family: $font-hd;
+}
+
+.landing-btn-container {
+	text-align: center;
+}
+.btn-landing {
+	border: none;
+	border-radius: 21px;
+	background: white;
+	color: black;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 4rem;
+	font-size: 20px;
+	position: relative;
+	top: 10px;
+	@include fade-bg;
+	&:hover {
+		background: #424242;
+		color: white;
+	}
+}
+
+//about section
+.about-container {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-family: $font-try;
+	h3 {
+		text-transform: uppercase;
+		font-size: 1.5rem;
+	}
+}
+.about-left {
+	height: 60vh;
+	padding: 7%;
+	background-color: $lt-blue;
+}
+.about-right {
+	padding: 7%;
+	height: 60vh;
+}
+
+.text-center {
+	width: 60%;
+}
+
+
+//coaches section
+.schedule-container {
+	min-height: 50vh;
+}
+
+#section-header {
+	background: $dark-gray;
+	color: white;
+	height: 15vh;
+	text-align: center;
+	font-family: $font-hd;
+}
+
+#bubba {
+	overflow: hidden;
+	@media only screen and (max-width: 600px) {
+		margin-top: 20px;
+	}
+}
+
+#dj {
+	overflow: hidden;
+}
+
+#dj-photo {
+	background-image: url(dj.jpg);
+}
+#bubba-photo {
+	background-image: url(bubba.jpg);
+}
+.coach-photo {
+	background-size: cover;
+	background-position: center;
+	//-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    //filter: grayscale(100%);
+	width: 100%;
+	height: 60vh;
+	position: relative;
+}
+.coach-desc {
+	color: #000;
+	font-family: $font-try;
+	font-weight: 500;
+	height: 60vh;
+	position: absolute;
+	top: 50vh;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+.coach-titles {
+	width: 100%;
+	height: 10vh;
+	background-color: $lt-blue;
+}
+.coach-bio {
+	width: 100%;
+	height: 50vh;
+	background-color: $dark-blue;
+	color: white;
+	padding: 10%;
+	p {
+		margin: 0;
+		text-transform: none;
+	}
+}
+.coach-bio-container {
+	padding: 50px;
+	.row {
+		height: 100%;
+		overflow: hidden;
+		.col {
+			height: 100%;
+		}
+	}
+}
+
+#dj,#bubba {
+	&:hover {
+		.coach-desc {
+			animation-name: coachUp;
+			-webkit-animation-name: coachUp;
+			animation-duration: 1s;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+			opacity: 0.9;
+		}
+	}
+}
+.contact-container {
+	height: 60vh;
+	color: $black;
+	background: $black;
+	.text-container {
+		background-color: $lt-blue;
+		width: 80%;
+		height: 100%;
+		margin: 0 auto;
+		font-family: $font-try;
+	}
+}
+
+.tabs {
+	float: left;
+	opacity: 0.8;
+	.indicator {
+		opacity: 0;
+	}
+	.tab {
+		a {
+			color: $dark-gray;
+			font-family: $font-try;
+			&:hover {
+				color: $lt-blue;
+			}
+		}
+		.active {
+			background: $dark-blue;
+			color: white;
+			opacity: 1;
+		}
+	}
+}
+
+.collection {
+	border: none;
+	padding-right: 15px;
+	font-family: $font-try;
+	margin-top: 20px;
+	.collection-item {
+		margin-bottom: 15px;
+		border-radius: 10px;
+		font-family: $font-try;
+		padding: 20px;
+		background-color: $dark-blue;
+		color: white;
+		opacity: 0.8;
+		.hour {
+			font-size: 2rem;
+			margin-right: 3px;
+		}
+		.spacer {
+			width: 10px;
+			height: 30px;
+			border-right: 1px solid white;
+			margin-right: 10px;
+			display: inline-block;
+			position: relative;
+			top: 5px;
+		}
+	}
+}
+
+#schedule-content {
+	padding: 100px 50px;
+}
+
+.schedule-tab {
+	background-color: $lt-gray;
+	color: $dark-gray;
+	border-radius: 10px;
+	margin-right: 15px !important;
+}

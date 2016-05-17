@@ -1,0 +1,396 @@
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important; }
+
+@keyframes run {
+  0% {
+    left: 0; }
+  100% {
+    left: 90%; } }
+@keyframes slideUp {
+  0% {
+    top: 20%;
+    opacity: 0; }
+  50% {
+    top: 10%;
+    opacity: 0.7; }
+  100% {
+    top: 0%;
+    opacity: 1; } }
+@keyframes coachUp {
+  0% {
+    top: 50vh; }
+  100% {
+    top: 0; } }
+@-webkit-keyframes coachUp {
+  0% {
+    top: 50vh; }
+  100% {
+    top: 0; } }
+@-webkit-keyframes slideUp {
+  0% {
+    top: 20%;
+    opacity: 0; }
+  50% {
+    top: 10%;
+    opacity: 0.7; }
+  100% {
+    top: 0%;
+    opacity: 1; } }
+.slideUp {
+  position: relative;
+  animation-name: slideUp;
+  -webkit-animation-name: slideUp;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  visibility: visible; }
+
+.hidden {
+  opacity: 0; }
+
+.visible {
+  opacity: 1; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.clearfix {
+  display: block; }
+
+html[xmlns] .clearfix {
+  display: block; }
+
+* html .clearfix {
+  height: 1%; }
+
+.btn-left {
+  margin-right: 10px; }
+
+.btn-right {
+  margin-left: 10px; }
+
+#loading-wrapper {
+  background: black;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; }
+
+#player-wrapper {
+  position: absolute;
+  bottom: 40%;
+  animation-name: run;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transform: scale(1.1); }
+  #player-wrapper img {
+    width: 150px; }
+
+.vertical-center {
+  display: flex;
+  justify-content: center; }
+
+.vertical-center--child {
+  align-self: center; }
+
+nav {
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
+  font-family: "Fjalla One", sans-serif; }
+  nav .nav-wrapper {
+    padding: 0 10px;
+    text-align: center; }
+    nav .nav-wrapper ul {
+      display: inline-block; }
+      nav .nav-wrapper ul a {
+        font-size: 20px; }
+        nav .nav-wrapper ul a:hover {
+          text-decoration: underline; }
+  nav a, nav li {
+    text-transform: uppercase; }
+
+nav ul a:hover {
+  background: none; }
+
+.btn-apply {
+  margin-left: 15px;
+  font-size: 20px;
+  color: #fff;
+  float: right;
+  -webkit-transition: background 0.4s linear;
+  -moz-transition: background 0.4s linear;
+  -ms-transition: background 0.4s linear;
+  -o-transition: background 0.4s linear;
+  transition: background 0.4s linear; }
+  .btn-apply:hover {
+    background-color: white;
+    color: #000; }
+
+.btn-apply-inverse {
+  color: #000;
+  background-color: #8DB5E2; }
+  .btn-apply-inverse:hover {
+    background: black;
+    color: #8DB5E2 !important; }
+
+.nav-down {
+  background-color: white;
+  color: #8DB5E2; }
+
+#nav-logo {
+  width: 30px;
+  position: relative;
+  top: 10px; }
+
+.btn-apply {
+  border: 2px solid #fff;
+  border-radius: 21px; }
+
+#brand-logo {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 20px;
+  float: left; }
+  @media only screen and (max-width: 500px) {
+    #brand-logo {
+      float: none;
+      text-align: center;
+      margin: 0 auto; } }
+
+#brand-logo-inverse {
+  color: #000; }
+
+.nav-inital {
+  background-color: black;
+  color: white;
+  box-shadow: none; }
+  .nav-inital a {
+    color: white; }
+
+.link-scroll {
+  color: #8DB5E2 !important; }
+
+.landing-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(landing-blur2.png);
+  background-size: cover;
+  background-position: center;
+  font-family: "Fjalla One", sans-serif;
+  color: white;
+  text-align: center; }
+  .landing-container h1, .landing-container h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white; }
+  .landing-container h4 {
+    font-family: "Fjalla One", sans-serif; }
+    @media only screen and (min-width: 600px) {
+      .landing-container h4 {
+        margin-top: 50px; } }
+  .landing-container h1 {
+    font-size: 5rem; }
+
+.camp-info {
+  max-width: 625px; }
+
+.landing-info {
+  display: block;
+  margin: 0 auto;
+  color: black;
+  font-family: "Fjalla One", sans-serif; }
+
+.landing-btn-container {
+  text-align: center; }
+
+.btn-landing {
+  border: none;
+  border-radius: 21px;
+  background: white;
+  color: black;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 4rem;
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  -webkit-transition: background 0.4s linear;
+  -moz-transition: background 0.4s linear;
+  -ms-transition: background 0.4s linear;
+  -o-transition: background 0.4s linear;
+  transition: background 0.4s linear; }
+  .btn-landing:hover {
+    background: #424242;
+    color: white; }
+
+.about-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Open Sans", sans-serif; }
+  .about-container h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem; }
+
+.about-left {
+  height: 60vh;
+  padding: 7%;
+  background-color: #8DB5E2; }
+
+.about-right {
+  padding: 7%;
+  height: 60vh; }
+
+.text-center {
+  width: 60%; }
+
+.schedule-container {
+  min-height: 50vh; }
+
+#section-header {
+  background: #424242;
+  color: white;
+  height: 15vh;
+  text-align: center;
+  font-family: "Fjalla One", sans-serif; }
+
+#bubba {
+  overflow: hidden; }
+  @media only screen and (max-width: 600px) {
+    #bubba {
+      margin-top: 20px; } }
+
+#dj {
+  overflow: hidden; }
+
+#dj-photo {
+  background-image: url(dj.jpg); }
+
+#bubba-photo {
+  background-image: url(bubba.jpg); }
+
+.coach-photo {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 60vh;
+  position: relative; }
+
+.coach-desc {
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  height: 60vh;
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.8; }
+
+.coach-titles {
+  width: 100%;
+  height: 10vh;
+  background-color: #8DB5E2; }
+
+.coach-bio {
+  width: 100%;
+  height: 50vh;
+  background-color: #0d47a1;
+  color: white;
+  padding: 10%; }
+  .coach-bio p {
+    margin: 0;
+    text-transform: none; }
+
+.coach-bio-container {
+  padding: 50px; }
+  .coach-bio-container .row {
+    height: 100%;
+    overflow: hidden; }
+    .coach-bio-container .row .col {
+      height: 100%; }
+
+#dj:hover .coach-desc, #bubba:hover .coach-desc {
+  animation-name: coachUp;
+  -webkit-animation-name: coachUp;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0.9; }
+
+.contact-container {
+  height: 60vh;
+  color: #000;
+  background: #000; }
+  .contact-container .text-container {
+    background-color: #8DB5E2;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif; }
+
+.tabs {
+  float: left;
+  opacity: 0.8; }
+  .tabs .indicator {
+    opacity: 0; }
+  .tabs .tab a {
+    color: #424242;
+    font-family: "Open Sans", sans-serif; }
+    .tabs .tab a:hover {
+      color: #8DB5E2; }
+  .tabs .tab .active {
+    background: #0d47a1;
+    color: white;
+    opacity: 1; }
+
+.collection {
+  border: none;
+  padding-right: 15px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 20px; }
+  .collection .collection-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-family: "Open Sans", sans-serif;
+    padding: 20px;
+    background-color: #0d47a1;
+    color: white;
+    opacity: 0.8; }
+    .collection .collection-item .hour {
+      font-size: 2rem;
+      margin-right: 3px; }
+    .collection .collection-item .spacer {
+      width: 10px;
+      height: 30px;
+      border-right: 1px solid white;
+      margin-right: 10px;
+      display: inline-block;
+      position: relative;
+      top: 5px; }
+
+#schedule-content {
+  padding: 100px 50px; }
+
+.schedule-tab {
+  background-color: #bdbdbd;
+  color: #424242;
+  border-radius: 10px;
+  margin-right: 15px !important; }
+
+/*# sourceMappingURL=theme.css.map */
