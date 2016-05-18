@@ -1,3 +1,28 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?pk7k58");
+  src: url("fonts/icomoon.eot?pk7k58#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?pk7k58") format("truetype"), url("fonts/icomoon.woff?pk7k58") format("woff"), url("fonts/icomoon.svg?pk7k58#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-facebook-square:before {
+  content: "\e900"; }
+
+.icon-instagram:before {
+  content: "\69"; }
+
 .preload * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
@@ -185,7 +210,10 @@ nav ul a:hover {
 .landing-container {
   width: 100%;
   height: 100vh;
-  background-image: url(landing-blur2.png);
+  background-image: url(background-dj2.png);
+  -webkit-filter: grayscale(100%);
+  /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
   background-size: cover;
   background-position: center;
   font-family: "Fjalla One", sans-serif;
@@ -388,6 +416,20 @@ nav ul a:hover {
       position: relative;
       top: 5px; }
 
+.btn-wrapper {
+  text-align: center; }
+  .btn-wrapper #btn-camp {
+    font-family: "Open Sans", sans-serif;
+    background: #bdbdbd;
+    color: #424242;
+    margin: 0 auto;
+    opacity: 0.8;
+    border-radius: 10px;
+    display: inline-block;
+    line-height: 48px;
+    height: 48px;
+    width: 250px; }
+
 #schedule-content {
   padding: 100px 50px; }
 
@@ -396,5 +438,8 @@ nav ul a:hover {
   color: #424242;
   border-radius: 10px;
   margin-right: 15px !important; }
+
+footer {
+  font-family: "Open Sans", sans-serif; }
 
 /*# sourceMappingURL=theme.css.map */
