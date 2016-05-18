@@ -529,6 +529,9 @@ nav ul a:hover {
 		line-height: 48px;
 		height: 48px;
 		width: 250px;
+		&:hover {
+			color: $lt-blue;
+		}
 	}
 }
 
