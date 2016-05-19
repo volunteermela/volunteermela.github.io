@@ -382,9 +382,6 @@ nav ul a:hover {
 #dj-photo {
 	background-image: url(dj.jpg);
 }
-#bubba-photo {
-	background-image: url(bubba.jpg);
-}
 .coach-photo {
 	background-size: cover;
 	background-position: center;
@@ -393,6 +390,10 @@ nav ul a:hover {
 	width: 100%;
 	height: 60vh;
 	position: relative;
+}
+#bubba-photo {
+	background-image: url(bubba.jpg);
+	background-position: 50% 0%;
 }
 .coach-desc {
 	color: #000;
@@ -548,4 +549,7 @@ nav ul a:hover {
 
 footer {
 	font-family: $font-try;
+	.link:hover {
+		color: $lt-blue !important;
+	}
 }
