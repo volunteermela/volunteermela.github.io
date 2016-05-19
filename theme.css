@@ -151,7 +151,7 @@ nav ul a:hover {
 
 .btn-apply {
   margin-left: 15px;
-  font-size: 20px;
+  font-size: 30px;
   color: #fff;
   float: right;
   -webkit-transition: background 0.4s linear;
@@ -227,7 +227,7 @@ nav ul a:hover {
     font-family: "Fjalla One", sans-serif; }
     @media only screen and (min-width: 600px) {
       .landing-container h4 {
-        margin-top: 50px; } }
+        margin-top: 80px; } }
   .landing-container h1 {
     font-size: 5rem; }
 
