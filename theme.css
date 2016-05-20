@@ -151,7 +151,7 @@ nav ul a:hover {
 
 .btn-apply {
   margin-left: 15px;
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
   float: right;
   -webkit-transition: background 0.4s linear;
@@ -442,9 +442,10 @@ nav ul a:hover {
   border-radius: 10px;
   margin-right: 15px !important; }
 
-footer {
-  font-family: "Open Sans", sans-serif; }
-  footer .link:hover {
+footer.page-footer {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 0px; }
+  footer.page-footer .link:hover {
     color: #8DB5E2 !important; }
 
 /*# sourceMappingURL=theme.css.map */

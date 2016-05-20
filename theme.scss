@@ -204,7 +204,7 @@ nav ul a:hover {
 
 .btn-apply {
 	margin-left: 15px;
-	font-size: 30px;
+	font-size: 20px;
 	color: #fff;
 	float: right;
 	@include fade-bg;
@@ -547,8 +547,9 @@ nav ul a:hover {
 	margin-right: 15px !important;
 }
 
-footer {
+footer.page-footer {
 	font-family: $font-try;
+	margin-top: 0px;
 	.link:hover {
 		color: $lt-blue !important;
 	}
