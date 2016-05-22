@@ -434,7 +434,21 @@ nav ul a:hover {
       color: #8DB5E2; }
 
 #schedule-content {
-  padding: 100px 50px; }
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-family: "Open Sans", sans-serif; }
+  #schedule-content h4 {
+    color: #0d47a1;
+    padding: 0 0.75rem; }
+  #schedule-content .camp-wrapper {
+    padding: 0 0.75rem;
+    margin-bottom: 40px; }
+    #schedule-content .camp-wrapper a {
+      color: #0d47a1; }
+      #schedule-content .camp-wrapper a:hover {
+        color: #8DB5E2; }
 
 .schedule-tab {
   background-color: #bdbdbd;

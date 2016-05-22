@@ -537,7 +537,25 @@ nav ul a:hover {
 }
 
 #schedule-content {
-	padding: 100px 50px;
+	width: 80%; 
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-family: $font-try;
+	h4 {
+		color: $dark-blue;
+		padding: 0 0.75rem;
+	}
+	.camp-wrapper {
+		padding: 0 0.75rem;
+		margin-bottom: 40px;
+		a {
+			color: $dark-blue;
+			&:hover {
+				color: $lt-blue;
+			}
+		}
+	}
 }
 
 .schedule-tab {
