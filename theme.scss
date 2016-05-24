@@ -540,7 +540,7 @@ nav ul a:hover {
 	width: 80%; 
 	margin: 0 auto;
 	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-bottom: 80px;
 	font-family: $font-try;
 	h4 {
 		color: $dark-blue;
@@ -554,6 +554,14 @@ nav ul a:hover {
 			&:hover {
 				color: $lt-blue;
 			}
+		}
+		.col {
+			text-align: center;
+			border: 1px solid black;
+			font-family: $font-hd;
+		}
+		#deadline {
+			text-decoration: underline;
 		}
 	}
 }

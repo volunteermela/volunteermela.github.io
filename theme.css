@@ -437,7 +437,7 @@ nav ul a:hover {
   width: 80%;
   margin: 0 auto;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   font-family: "Open Sans", sans-serif; }
   #schedule-content h4 {
     color: #0d47a1;
@@ -449,6 +449,12 @@ nav ul a:hover {
       color: #0d47a1; }
       #schedule-content .camp-wrapper a:hover {
         color: #8DB5E2; }
+    #schedule-content .camp-wrapper .col {
+      text-align: center;
+      border: 1px solid black;
+      font-family: "Fjalla One", sans-serif; }
+    #schedule-content .camp-wrapper #deadline {
+      text-decoration: underline; }
 
 .schedule-tab {
   background-color: #bdbdbd;
