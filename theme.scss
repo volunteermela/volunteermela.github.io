@@ -127,6 +127,7 @@ $font-try:'Open Sans', sans-serif;
 $lt-blue: #8DB5E2;
 $dark-blue: #0d47a1;
 $lt-gray: #bdbdbd;
+$med-gray: #616161;
 $dark-gray: #424242;
 $black: #000;
 $white: #fff;
@@ -188,6 +189,7 @@ nav {
 				font-size: 20px;
 				&:hover {
 					text-decoration: underline;
+					opacity: 0.9;
 				}
 			}
 		}
@@ -209,7 +211,8 @@ nav ul a:hover {
 	float: right;
 	@include fade-bg;
 	&:hover {
-		background-color: white;
+		background-color: $lt-blue;
+		border: 2px solid $lt-blue;
 		color: #000;
 	}
 }
@@ -217,14 +220,16 @@ nav ul a:hover {
 .btn-apply-inverse {
 	color: $black;
 	background-color: $lt-blue;
+	border: none !important;
 	&:hover {
 		background: black;
 		color: $lt-blue !important;
 	}
 }
 .nav-down {
-	background-color: white;
+	background-color: $dark-gray;
 	color: $lt-blue;
+	opacity: 0.9;
 }
 
 //logo in navbar
@@ -272,9 +277,9 @@ nav ul a:hover {
 .landing-container {
   width: 100%;
   height: 100vh;
-  background-image: url(background-dj2.png);
-  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-  filter: grayscale(100%);
+  background-image: url(bg-hompage.png);
+  //-webkit-filter: grayscale(100%);
+  //filter: grayscale(100%);
   background-size: cover;
   background-position: center;
   font-family: $font-hd;
@@ -283,7 +288,6 @@ nav ul a:hover {
   h1,h3 {
   	text-align: center;
   	text-transform: uppercase;
-  	color: white;
   }
   h4 {
   	font-family: $font-hd;
@@ -337,7 +341,7 @@ nav ul a:hover {
 	font-family: $font-try;
 	h3 {
 		text-transform: uppercase;
-		font-size: 1.5rem;
+		font-size: 1.65rem;
 	}
 }
 .about-left {
@@ -361,7 +365,7 @@ nav ul a:hover {
 }
 
 #section-header {
-	background: $dark-gray;
+	background: $med-gray;
 	color: white;
 	height: 15vh;
 	text-align: center;
@@ -477,13 +481,16 @@ nav ul a:hover {
 			color: $dark-gray;
 			font-family: $font-try;
 			&:hover {
-				color: $lt-blue;
+				color: $dark-blue;
 			}
 		}
 		.active {
 			background: $dark-blue;
 			color: white;
 			opacity: 1;
+			&:hover {
+				color: $lt-blue;
+			}
 		}
 	}
 }
@@ -531,7 +538,7 @@ nav ul a:hover {
 		height: 48px;
 		width: 250px;
 		&:hover {
-			color: $lt-blue;
+			color: $dark-blue;
 		}
 	}
 }

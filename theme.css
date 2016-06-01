@@ -142,7 +142,8 @@ nav {
       nav .nav-wrapper ul a {
         font-size: 20px; }
         nav .nav-wrapper ul a:hover {
-          text-decoration: underline; }
+          text-decoration: underline;
+          opacity: 0.9; }
   nav a, nav li {
     text-transform: uppercase; }
 
@@ -160,19 +161,22 @@ nav ul a:hover {
   -o-transition: background 0.4s linear;
   transition: background 0.4s linear; }
   .btn-apply:hover {
-    background-color: white;
+    background-color: #8DB5E2;
+    border: 2px solid #8DB5E2;
     color: #000; }
 
 .btn-apply-inverse {
   color: #000;
-  background-color: #8DB5E2; }
+  background-color: #8DB5E2;
+  border: none !important; }
   .btn-apply-inverse:hover {
     background: black;
     color: #8DB5E2 !important; }
 
 .nav-down {
-  background-color: white;
-  color: #8DB5E2; }
+  background-color: #424242;
+  color: #8DB5E2;
+  opacity: 0.9; }
 
 #nav-logo {
   width: 30px;
@@ -210,10 +214,7 @@ nav ul a:hover {
 .landing-container {
   width: 100%;
   height: 100vh;
-  background-image: url(background-dj2.png);
-  -webkit-filter: grayscale(100%);
-  /* Chrome, Safari, Opera */
-  filter: grayscale(100%);
+  background-image: url(bg-hompage.png);
   background-size: cover;
   background-position: center;
   font-family: "Fjalla One", sans-serif;
@@ -221,8 +222,7 @@ nav ul a:hover {
   text-align: center; }
   .landing-container h1, .landing-container h3 {
     text-align: center;
-    text-transform: uppercase;
-    color: white; }
+    text-transform: uppercase; }
   .landing-container h4 {
     font-family: "Fjalla One", sans-serif; }
     @media only screen and (min-width: 600px) {
@@ -270,7 +270,7 @@ nav ul a:hover {
   font-family: "Open Sans", sans-serif; }
   .about-container h3 {
     text-transform: uppercase;
-    font-size: 1.5rem; }
+    font-size: 1.65rem; }
 
 .about-left {
   height: 60vh;
@@ -288,7 +288,7 @@ nav ul a:hover {
   min-height: 50vh; }
 
 #section-header {
-  background: #424242;
+  background: #616161;
   color: white;
   height: 15vh;
   text-align: center;
@@ -386,11 +386,13 @@ nav ul a:hover {
     color: #424242;
     font-family: "Open Sans", sans-serif; }
     .tabs .tab a:hover {
-      color: #8DB5E2; }
+      color: #0d47a1; }
   .tabs .tab .active {
     background: #0d47a1;
     color: white;
     opacity: 1; }
+    .tabs .tab .active:hover {
+      color: #8DB5E2; }
 
 .collection {
   border: none;
@@ -431,7 +433,7 @@ nav ul a:hover {
     height: 48px;
     width: 250px; }
     .btn-wrapper #btn-camp:hover {
-      color: #8DB5E2; }
+      color: #0d47a1; }
 
 #schedule-content {
   width: 80%;
