@@ -345,13 +345,13 @@ nav ul a:hover {
 	}
 }
 .about-left {
-	height: 60vh;
+	min-height: 60vh;
 	padding: 7%;
 	background-color: $lt-blue;
 }
 .about-right {
 	padding: 7%;
-	height: 60vh;
+	min-height: 60vh;
 }
 
 .text-center {
