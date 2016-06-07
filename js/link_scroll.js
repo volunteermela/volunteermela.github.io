@@ -6,21 +6,21 @@ $("#brand-logo").click(function() {
 });
 $("#mission").click(function() {
     $('html,body').animate({
-         scrollTop: $('.about-header').offset().top - 50
+         scrollTop: $('.about-header').offset().top - 62
     }, 500);
 });
 $("#coaches").click(function() {
     $('html,body').animate({
-         scrollTop: $('.coaches-container').offset().top - 50
+         scrollTop: $('.coaches-container').offset().top - 62
     }, 500);
 });
 $("#schedule").click(function() {
     $('html,body').animate({
-         scrollTop: $('.schedule-container').offset().top - 50
+         scrollTop: $('.schedule-container').offset().top - 62
     }, 500);
 });
 $("#contact").click(function() {
     $('html,body').animate({
-         scrollTop: $('.page-footer').offset().top - 50
+         scrollTop: $('.page-footer').offset().top - 62
     }, 500);
 });
