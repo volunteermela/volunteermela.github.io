@@ -214,9 +214,7 @@ nav ul a:hover {
 .landing-container {
   width: 100%;
   height: 100vh;
-  background-image: url(background-dj.jpg);
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+  background-image: url(phototest.png);
   background-size: cover;
   background-position: center;
   font-family: "Fjalla One", sans-serif;
@@ -275,13 +273,13 @@ nav ul a:hover {
     font-size: 1.65rem; }
 
 .about-left {
-  height: 60vh;
+  min-height: 60vh;
   padding: 7%;
   background-color: #8DB5E2; }
 
 .about-right {
   padding: 7%;
-  height: 60vh; }
+  min-height: 60vh; }
 
 .text-center {
   width: 60%; }
