@@ -38,27 +38,10 @@
   -o-transition: none !important;
 }
 
-@keyframes run {
-    0% {left: 0;}
-    100% {left: 90%;}
-}
-
 @keyframes slideUp {
 	0%   {top: 20%; opacity: 0;}
     50%  {top: 10%; opacity: 0.7;}
     100% {top: 0%; opacity: 1;}
-}
-
-@keyframes coachUp {
-	0%   {top: 50vh;}
-    //50%  {top: 25vh;}
-    100% {top: 0;}
-}
-
-@-webkit-keyframes coachUp {
-	0%   {top: 50vh;}
-    //50%  {top: 25vh;}
-    100% {top: 0;}
 }
 
 @-webkit-keyframes slideUp {
@@ -75,7 +58,6 @@
 	-webkit-animation-duration: 1s;
 	animation-timing-function: linear;
 	-webkit-animation-timing-function: linear;
-	//animation-delay: 1s;
 	visibility: visible;
 }
 
@@ -120,13 +102,13 @@ html[xmlns] .clearfix {
 }
 
 //variables
-$font-hd: 'Fjalla One', sans-serif;
-$font-body: 'Cantarell', sans-serif;
-$font-try:'Open Sans', sans-serif;
+$font-hd: 'Roboto', sans-serif;
+$font-body: 'Roboto', sans-serif;
+$font-try:'Roboto', sans-serif;
 
 $lt-blue: #8DB5E2;
 $dark-blue: #0d47a1;
-$lt-gray: #bdbdbd;
+$lt-gray: #D8D8D8;
 $med-gray: #616161;
 $dark-gray: #424242;
 $black: #000;
@@ -213,7 +195,7 @@ nav ul a:hover {
 	&:hover {
 		background-color: $lt-blue;
 		border: 2px solid $lt-blue;
-		color: #000;
+		color: #fff;
 	}
 }
 
@@ -277,31 +259,87 @@ nav ul a:hover {
 .landing-container {
   width: 100%;
   height: 100vh;
-  background-image: url(homepage.png);
+  background-image: url(background.png);
   background-size: cover;
   background-position: center;
   font-family: $font-hd;
   color: white;
   text-align: center;
+  .logo {
+  	width: 55px;
+  	display: inline-block;
+  	margin-right: 5px;
+  }
+  .logo-text {
+  	display: inline-block;
+  	color: white;
+  }
   h1,h3 {
   	text-align: center;
-  	text-transform: uppercase;
-  }
-  h4 {
-  	font-family: $font-hd;
-  	@media only screen and (min-width: 600px) {
-		margin-top: 80px;
-	}
   }
   h1 {
-  	font-size: 5rem;
+  	font-size: 5em;
+  	letter-spacing: -3px;
+  }
+  h3 {
+  	font-size: 1.8em;
+  	color: $lt-gray;
+  }
+  .btn {
+  	color: white;
+  	border: 1px solid white;
+  	margin-right: 30px;
+  	line-height: 48px;
+  	height: 48px;
+  	letter-spacing: 1.5px;
+  	&:hover {
+  		background-color: transparent;
+  	}
   }
 }
 
-.camp-info {
-	max-width: 625px;
-	//@include slideUp;
+.modal {
+	top: 25%;
+	width: 35%;
+	padding: 10px 20px;
+	color: black;
+	min-height: 40%;
+	h4 {
+		color: #1F9C37;
+		display: inline-block;
+		position: relative;
+		bottom: 10px;
+		font-size: 22px;
+	}
+	.title {
+		float: left;
+	}
+	p {
+		text-align: justify;
+	}
+	img {
+		width: 35px;
+	}
+	.close-modal {
+		float: right;
+		&:hover {
+			pointer: cursor;
+		}
+	}
+	.modal-footer {
+		border-top: 1px solid #D8D8D8;
+	}
 }
+
+#mc-embedded-subscribe {
+	width: 100%;
+	background-color: #1F9C37;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+}
+
 
 .landing-info {
 	display: block;
@@ -312,23 +350,6 @@ nav ul a:hover {
 
 .landing-btn-container {
 	text-align: center;
-}
-.btn-landing {
-	border: none;
-	border-radius: 21px;
-	background: white;
-	color: black;
-	height: 48px;
-	line-height: 48px;
-	padding: 0 4rem;
-	font-size: 20px;
-	position: relative;
-	top: 10px;
-	@include fade-bg;
-	&:hover {
-		background: #424242;
-		color: white;
-	}
 }
 
 //about section
@@ -360,227 +381,36 @@ nav ul a:hover {
 //coaches section
 .schedule-container {
 	min-height: 50vh;
-}
-
-#section-header {
-	background: $med-gray;
-	color: white;
-	height: 15vh;
-	text-align: center;
-	font-family: $font-hd;
-}
-
-#bubba {
-	overflow: hidden;
-	@media only screen and (max-width: 600px) {
-		margin-top: 20px;
-	}
-}
-
-#dj {
-	overflow: hidden;
-}
-
-#dj-photo {
-	background-image: url(dj.jpg);
-}
-.coach-photo {
-	background-size: cover;
-	background-position: center;
-	//-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-    //filter: grayscale(100%);
-	width: 100%;
-	height: 60vh;
-	position: relative;
-}
-#bubba-photo {
-	background-image: url(bubba.jpg);
-	background-position: 50% 0%;
-}
-.coach-desc {
-	color: #000;
-	font-family: $font-try;
-	font-weight: 500;
-	height: 60vh;
-	position: absolute;
-	top: 50vh;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	text-transform: uppercase;
-	opacity: 0.8;
-}
-
-.coach-titles {
-	width: 100%;
-	height: 10vh;
-	background-color: $lt-blue;
-}
-.coach-bio {
-	width: 100%;
-	height: 50vh;
-	background-color: $dark-blue;
-	color: white;
-	padding: 10%;
-	overflow: scroll;
-	p {
-		margin: 0;
-		text-transform: none;
-	}
-	@media only screen and (max-width: 500px) {
-		padding: 10px;
-	}
-}
-.coach-bio-container {
-	padding: 50px;
-	.row {
-		height: 100%;
-		overflow: hidden;
-		.col {
-			height: 100%;
+	padding: 50px 10px;
+	.title {
+		text-align: center;
+		p {
+			color: #ACACAC;
+			font-size: 18px;
 		}
 	}
-}
-
-#dj,#bubba {
-	&:hover {
-		.coach-desc {
-			animation-name: coachUp;
-			-webkit-animation-name: coachUp;
-			animation-duration: 1s;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: forwards;
-			animation-fill-mode: forwards;
-			opacity: 0.9;
-		}
+	h5 {
+		text-align: center;
 	}
-}
-.contact-container {
-	height: 60vh;
-	color: $black;
-	background: $black;
-	.text-container {
-		background-color: $lt-blue;
-		width: 80%;
-		height: 100%;
-		margin: 0 auto;
-		font-family: $font-try;
-	}
-}
-
-.tabs {
-	float: left;
-	opacity: 0.8;
-	.indicator {
-		opacity: 0;
-	}
-	.tab {
-		a {
-			color: $dark-gray;
-			font-family: $font-try;
-			&:hover {
-				color: $dark-blue;
-			}
-		}
-		.active {
-			background: $dark-blue;
+	.steps {
+		padding: 30px;
+		.btn-floating {
+			background-color: #1F9C37;
 			color: white;
-			opacity: 1;
-			&:hover {
-				color: $lt-blue;
-			}
-		}
-	}
-}
-
-.collection {
-	border: none;
-	padding-right: 15px;
-	font-family: $font-try;
-	margin-top: 20px;
-	.collection-item {
-		margin-bottom: 15px;
-		border-radius: 10px;
-		font-family: $font-try;
-		padding: 20px;
-		background-color: $dark-blue;
-		color: white;
-		opacity: 0.8;
-		.hour {
-			font-size: 2rem;
-			margin-right: 3px;
-		}
-		.spacer {
-			width: 10px;
-			height: 30px;
-			border-right: 1px solid white;
-			margin-right: 10px;
-			display: inline-block;
-			position: relative;
-			top: 5px;
-		}
-	}
-}
-
-.btn-wrapper {
-	text-align: center;
-	#btn-camp {
-		font-family: $font-try;
-		background: $lt-gray;
-		color: $dark-gray;
-		margin: 0 auto;
-		opacity: 0.8;
-		border-radius: 10px;
-		display: inline-block;
-		line-height: 48px;
-		height: 48px;
-		width: 250px;
-		&:hover {
-			color: $dark-blue;
-		}
-	}
-}
-
-#schedule-content {
-	width: 80%; 
-	margin: 0 auto;
-	padding-top: 50px;
-	padding-bottom: 80px;
-	font-family: $font-try;
-	h4 {
-		color: $dark-blue;
-		padding: 0 0.75rem;
-	}
-	.camp-wrapper {
-		padding: 0 0.75rem;
-		margin-bottom: 40px;
-		a {
-			color: $dark-blue;
-			&:hover {
-				color: $lt-blue;
-			}
-		}
-		.col {
 			text-align: center;
-			border: 1px solid black;
-			font-family: $font-hd;
+			margin-bottom: 20px;
+			margin-right: 15px;
 		}
-		#deadline {
-			text-decoration: underline;
+		p {
+			display: inline-block;
 		}
 	}
-}
-
-.schedule-tab {
-	background-color: $lt-gray;
-	color: $dark-gray;
-	border-radius: 10px;
-	margin-right: 15px !important;
 }
 
 footer.page-footer {
 	font-family: $font-try;
 	margin-top: 0px;
+	padding-top: 0px;
 	.link:hover {
 		color: $lt-blue !important;
 	}

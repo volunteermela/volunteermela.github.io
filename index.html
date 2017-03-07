@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-  <!-- development by Michelle Yin for Phenom Lacrosse -->
-  <link rel="shortcut icon" href="transparent-logo.png">
-	<!--Import Google Icon Font-->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,500,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Cantarell:400,700,400italic' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<!-- Compiled and minified CSS -->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-	<!-- personalized css -->
-	<link rel="stylesheet" type="text/css" href="theme.css">
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Phenom Lacrosse</title>
+  <meta charset="UTF-8">
+  <!-- GOOGLE ANALYTICS -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-93177853-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <link rel="shortcut icon" href="icon.png">
+  <!--Import Google Icon Font-->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!-- Compiled and minified CSS -->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <!-- personalized css -->
+  <link rel="stylesheet" type="text/css" href="theme.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VolunteerMe</title>
 </head>
-<body class="preload">
-
-<!-- preloader screen -->
-<div id="loading-wrapper">
-	<div id="player-wrapper"><img src="laxplayer2.png" id="laxplayer"></div>
-</div>
-
+<body>
 <!-- beginning of main content -->
 <div id="main-container container-fluid">
-	<div class="navbar-fixed" style="position: absolute"> <!-- navbar -->
-    <nav>
+  <div class="navbar-fixed" style="position: absolute"> <!-- navbar -->
+    <nav style="display: none">
       <div class="nav-wrapper nav-initial vertical-center">
         <a href="#" id="brand-logo" class="vertical-center--child scrollspy">
-        	<img id="nav-logo" src="transparent-logo.png"/>
-        	<span>Phenom Lacrosse</span>
+          <img id="nav-logo" src="transparent-logo.png"/>
+          <span>Phenom Lacrosse</span>
         </a>
         <ul class="hide-on-med-and-down vertical-center--child">
           <li><a href="#" id="schedule" class="scrollspy">The Camp</a></li>
@@ -46,280 +47,185 @@
     </nav>
   </div>
   <!-- LANDING PAGE -->
-    <div class="landing-container vertical-center">
-    	<div class="vertical-center--child camp-info animation-element" style="visibility: hidden;">
-    		<h1>Phenom Lacrosse</h1>
-        <h1>& Development</h1>
-    		<h4>Intensive Summer Camp / July 25-28</h4>
-    		<div class="landing-btn-container">
-    			<a href="http://goo.gl/forms/2tkX2CfTvz" target="_blank" class="btn-flat btn-landing">Apply Now</a>
-    		</div>
-    	</div>
-    </div><!-- end of landing -->
+  <div class="landing-container vertical-center">
+    <div class="vertical-center--child animation-element">
+      <div class="vertical-center">
+        <img src="icon.png" class="vertical-center--child logo"/>
+        <div class="vertical-center--child logo-text"><h3>VolunteerMe</h3></div>
+      </div>
+      <h1>Welcome To VolunteerMe</h1>
+      <h3>Where crowdsourcing meets volunteering. Get involved in your community.</h3>
+      <div class="landing-btn-container">
+        <a href="#modal1" class="btn btn-flat" onclick="openVolunteerModal(event)">BROWSE EVENTS</a>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-header">
+            <div class="title">
+              <img src="icon.png"/>
+              <h4>Volunteers</h4>
+            </div>
+            <div class="close-modal" onclick="hideVolunteerModal(event)">&#10005;</div>
+          </div>
+          <div class="modal-content"></div>
+          <div class="modal-footer">
+            <p>Please enter your email to learn about volunteering opporunities with local charities.</p>
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="https://github.us15.list-manage.com/subscribe/post?u=375208cbc08beadf7e4ca63fc&amp;id=cc37db272d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_375208cbc08beadf7e4ca63fc_cc37db272d" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="hideVolunteerModal(event)"></div>
+                </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        <a href="#modal2" class="btn btn-flat" onclick="openOrganizerModal(event)">POST AN EVENT</a>
+        <!-- Modal Structure -->
+        <div id="modal2" class="modal">
+          <div class="modal-header">
+            <div class="title">
+              <img src="icon.png"/>
+              <h4>Organizers</h4>
+            </div>
+            <div class="close-modal" onclick="hideOrganizerModal(event)">&#10005;</div>
+          </div>
+          <div class="modal-content"></div>
+          <div class="modal-footer">
+            <p>Please enter your email to learn more about partnering with us to raise funds for your charity event.</p>
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="https://github.us15.list-manage.com/subscribe/post?u=375208cbc08beadf7e4ca63fc&amp;id=cc37db272d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_375208cbc08beadf7e4ca63fc_cc37db272d" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="hideOrganizerModal(event)"></div>
+                </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end of landing -->
     <!-- camp schedule container -->
-  <div class="schedule-container">
-    <div id="section-header" class="vertical-center"><h3 class="vertical-center--child">SUMMER CAMP 2016</h1></div>
+  <div class="schedule-container container">
     <div id="schedule-content" class="row">
-      <h4>CAMP FORMAT</h4>
-      <div class="camp-wrapper">
-      <p>To ensure top-level instruction and competition, a set number of players for each position will be
-      selected based on skill and experience. The first two days will be dedicated to specialized, position specific drills to enhance players' understanding of the nuances of each position. The final two days will comprise of group play with all positions to practice newly learned skills and insights. The last two days will also have Choice Sessions, where players can decide which skills they wish to improve, including but not limited to: face offs, agility/endurance training, and stick checking.</p>
-      <p>Please complete the application in order to be considered for this amazing experience in lacrosse education. After completion, the coaches will review applications and select players based on their experience, recommendations, and space. There are a limited number of spots for each position, and <span id="deadline">registration closes July 1st</span>, so <a href="http://goo.gl/forms/2tkX2CfTvz" target="_blank">APPLY NOW!</a></p>
-      </br>
-      <h4 style="padding: 0;">COST $250</h4>
-      <p>Includes: camp fee, shooting shirt, and a reversible.</p>
-      </br>
-      <h4 style="padding:0">LOCATION</h4>
-      <p>Palo Alto High School </br> 50 Embarcadero Rd, Palo Alto, CA 94301</p>
-      </br>
-      <h4 style="padding: 0">SCHEDULE</h4>
-      </div>
-      <div class="col s12">
-        <ul class="tabs" style="width: 60%">
-          <li class="tab col s3 schedule-tab"><a class="active" href="#test1">Monday - 7/25</a></li>
-          <li class="tab col s3 schedule-tab"><a href="#test2">Tuesday - 7/26</a></li>
-          <li class="tab col s3 schedule-tab"><a href="#test3">Wednesday - 7/27</a></li>
-          <li class="tab col s3 schedule-tab" style="margin-right: 0;"><a href="#test4">Thursday - 7/28</a></li>
-        </ul>
-      </div>
-      <div id="test1" class="col s12">
-        <ul class="monday collection">
-          <li class="collection-item">
-            <span class="collection-wrapper">
-              <span class="hour">8</span><span class="min">00 - </span>
-              <span class="hour">10</span><span class="min">00</span>
-              <div class="spacer"></div>
-              Attack & Defense Specific Session
-            </span>
-          </li>
-          <li class="collection-item">
-             <span class="collection-wrapper">
-              <span class="hour">10</span><span class="min">00 - </span>
-              <span class="hour">12</span><span class="min">00</span>
-              <div class="spacer"></div>
-              Midfield Specific Session
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div id="test2" class="col s12">
-        <ul class="tuesday collection">
-          <li class="collection-item">
-            <span class="collection-wrapper">
-              <span class="hour">8</span><span class="min">00 - </span>
-              <span class="hour">10</span><span class="min">00</span>
-              <div class="spacer"></div>
-              Attack & Defense Specific Session
-            </span>
-          </li>
-          <li class="collection-item">
-            <span class="collection-wrapper">
-              <span class="hour">10</span><span class="min">00 - </span>
-              <span class="hour">12</span><span class="min">00</span>
-              <div class="spacer"></div>
-              Midfield Specific Session
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div id="test3" class="col s12">
-        <ul class="wednesday collection">
-          <li class="collection-item">
-            <span class="collection-wrapper">
-              <span class="hour">8</span><span class="min">00 - </span>
-              <span class="hour">10</span><span class="min">00</span>
-              <div class="spacer"></div>
-              Combined Play/Situations
-            </span>
-          </li>
-          <li class="collection-item">
-            <span class="collection-wrapper">
-              <span class="hour">10</span><span class="min">00 - </span>
-              <span class="hour">12</span><span class="min">00</span>
-              <div class="spacer"></div>
-              Choice Sessions
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div id="test4" class="col s12">
-        <ul class="thursday collection">
-          <li class="collection-item">
-            <span class="collection-wrapper">
-              <span class="hour">8</span><span class="min">00 - </span>
-              <span class="hour">10</span><span class="min">00</span>
-              <div class="spacer"></div>
-              Combined Play/Situations
-            </span>
-          </li>
-          <li class="collection-item">
-            <span class="collection-wrapper">
-              <span class="hour">10</span><span class="min">00 - </span>
-              <span class="hour">12</span><span class="min">00</span>
-              <div class="spacer"></div>
-              Choice Sessions
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div class="btn-wrapper">
-        <a href="phenomflyer.pdf" target="_blank" id="btn-camp" class="btn-flat vertical-center--child hide-on-med-and-down">Download Flyer</a>
+      <div class="title">
+        <h1>What We Do</h1>
+        <p>Learn about local charities in your community and pledge your time.</p>
       </div>
     </div>
-  </div>
-    <!-- meet the coaches container -->
-  <div class="coaches-container">
-    <div id="section-header" class="vertical-center"><h3 class="vertical-center--child">COACHING STAFF</h1></div>
-    <div class="coach-bio-container">
-      <div class="row">
-        <div id="dj" class="col s12 m6">
-          <div class="coach-photo" id="dj-photo">
-            <div class="coach-desc" id="dj-title">
-              <div class="coach-titles vertical-center">
-                <div class="wrapper vertical-center--child">
-                  <h6 style="font-weight: bold; font-size: 1.5rem;">DJ Shelton</h6>
-                  <h6>COACH</h6>
-                </div>
-              </div>
-              <div class="coach-bio vertical-center">
-                <p class="vertical-center--child">Coach DJ Shelton is a Palo Alto native, and the head varsity coach of Palo Alto High
-                School, where he won 2014 SCVAL Coach of the Year Award, and won the 2015
-                SCVAL Championship. He played at Goucher College (Div. III) in Baltimore, MD,
-                where he played defense and was a face off specialist. Goucher made two NCAA
-                tournament appearances during his time there, and was ranked #10 in the nation his
-                senior year. Coach Shelton has 12 years of coaching experience of all ages, and
-                founded Phenom in high school to start giving back to the game that had given him
-                so much.
-              </p>
-              </div>
-          </div>
-          </div>
-        </div>
-        <div id="bubba" class="col s12 m6">
-          <div class="coach-photo" id="bubba-photo">
-           <div class="coach-desc" id="bubba-title">
-             <div class="coach-titles vertical-center">
-                <div class="wrapper vertical-center--child">
-                  <h6 style="font-weight: bold; font-size: 1.5rem;">Bubba Paguirigan</h6>
-                  <h6>COACH</h6>
-                </div>
-              </div>
-              <div class="coach-bio">
-                <p>Coach Manuel “Bubba” Paguirigan is currently an assistant coach for the boys
-                  lacrosse team at Palo Alto High School. Before Paly, Bubba coached at Santa Clara
-                  University, Sequoia High School, and at the youth level for the Firehawks and
-                  Tomahawks programs. Growing up in Palo Alto, he has been playing for 16 years
-                  and played alongside Coach Shelton on the Tomahawks and Redhawks. Since high
-                  school, Bubba has focused on giving back by sharing his love and passion for the
-                  game to all ages.
-                </p>
-              </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ABOUT PAGE -->
-  <div id="section-header" class="vertical-center about-header"><h3 class="vertical-center--child">ABOUT US</h1></div>
-  <div class="about-container clearfix row">
-  	<div class="col s12 m6 about-left vertical-center">
-  		<div class="text-center vertical-center--child animation-element">
-	  		<h3>The Phenom Mission</h3>
-	  		<p>Phenom Lacrosse recruits small groups of players to ensure individualized coaching for a stronger understanding of lacrosse.
-        </p>
-  		</div>
-  	</div>
-  	<div class="col s12 m6 about-right vertical-center">
-  	    <div class="text-center vertical-center--child animation-element">
-	  		<h3>Our Philosophy</h3>
-	  		<p>The objective is to turn the field into a classroom. Sessions are designed for the
-			players to receive top-level instruction through specialized, position-specific drills,
-			and then to utilize them in live play. In a competitive atmosphere, players will have
-			the game broken down for them to fine-tune their fundamental skills and develop a
-			stronger lacrosse IQ.</p>
-		</div>
-  	</div>
-  </div> <!-- end of about page-->
-  <!-- contact container -->
-  <footer class="page-footer grey darken-2">
-  <div class="container">
     <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Contact Us</h5>
-        <p class="grey-text text-lighten-4">coachdj@phenomld.com</p>
+      <div class="col s6">
+        <h5>For Organizers</h5>
+        <div class="steps">
+          <div class="step valign-wrapper">
+            <div class="btn-floating valign">1</div>
+            <p class="valign">Register an event</p>
+          </div>
+          <div class="step valign-wrapper">
+            <div class="btn-floating valign">2</div>
+            <p class="valign">Crowdsource volunteers and resources</p>
+          </div>
+         <div class="step valign-wrapper">
+           <div class="btn-floating valign">3</div>
+           <p class="valign">Throw event</p>
+         </div>
+        </div>
       </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
-        <ul>
-          <li id="facebook"><a class="link grey-text text-lighten-3" href="https://www.facebook.com/Phenom-Lacrosse-Development-Recruiting-103472539685274/?fref=ts">
-            <span class="icon icon-facebook-square" style="margin-right: 5px"></span>Facebook</a></li>
-          <li style="position: relative; right: 10px;"><a class="link grey-text text-lighten-3" href="phenomflyer.pdf">
-              <i class="small material-icons">play_for_work</i><span style="position: relative; bottom: 10px;">Flyer</span></a></li>
-        </ul>
+      <div class="col s6">
+        <h5>For Volunteers</h5>
+        <div class="steps">
+          <div class="step valign-wrapper">
+            <div class="btn-floating valign">1</div>
+            <p class="valign">Learn about local charities</p>
+          </div>
+          <div class="step valign-wrapper">
+            <div class="btn-floating valign">2</div>
+            <p class="valign">Donate your time</p>
+          </div>
+         <div class="step valign-wrapper">
+           <div class="btn-floating valign">3</div>
+           <p class="valign">Improve your community</p>
+         </div>
+        </div>
       </div>
     </div>
   </div>
+<footer class="page-footer grey darken-2">
   <div class="footer-copyright grey darken-3">
     <div class="container">
-    © 2016 Phenom Lacrosse & Development
+    © VolunteerMe 2017
     </div>
   </div>
 </footer>
 </div> <!-- end of main container -->
-<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
-<script type="text/javascript" src="js/link_scroll.js"></script>
 <script type="text/javascript" src="js/slide_animation.js"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  function hideVolunteerModal(event) {
+    ga('send', 'event', 'SUSCRIBE', 'click', 'landing page button');
+    $("#modal1").css("display", "none");
+  }
 
-  ga('create', 'UA-79250899-1', 'auto');
-  ga('send', 'pageview');
+  function openVolunteerModal(event) {
+    ga('send', 'event', 'BROWSE EVENT', 'click', 'landing page button');
+    $("#modal1").css("display", "block");
+  }
 
-</script>
-<script>
-    $(document).ready(function() {
-        $("#main-container").css("display", "none");
-        $("#main-container").fadeIn(1000);
+  function openOrganizerModal(event) {
+    ga('send', 'event', 'POST EVENT', 'click', 'landing page button');
+    $("#modal2").css("display", "block");
+  }
+
+  function hideOrganizerModal(event) {
+    ga('send', 'event', 'SUSCRIBE', 'click', 'landing page button');
+    $("#modal2").css("display", "none");
+  }
+
+  $(document).ready(function() {
+      $("#main-container").css("display", "none");
+      $("#main-container").fadeIn(1000);
+  });
+
+  $(window).load(function() {
+    $("#loading-wrapper").fadeOut(1000)
+    $("body").removeClass("preload");
+    $(".camp-info").css('visibility','visible');
+  });
+
+  $(window).scroll(function(e){
+    if($(window).scrollTop() >= (10)){
+      $('.nav-wrapper').removeClass('nav-initial');
+      $('.nav-wrapper').addClass('nav-down');
+      $('nav ul a').css('color','#fff');
+      $('nav a').css('color','#fff');
+      $('.btn-apply').addClass('btn-apply-inverse');
+      $('.btn-apply').hover(function(){
+        $(this).css("color", "#8DB5E2;");
+        }, function(){
+        $(this).css("color", "#fff");
     });
-
-    $(window).load(function() {
-      $("#loading-wrapper").fadeOut(1000)
-  	  $("body").removeClass("preload");
-  	  $(".camp-info").css('visibility','visible');
+    }
+    if ($(window).scrollTop() <= (0)){
+      $('.nav-wrapper').removeClass('nav-down');
+      $('.nav-wrapper').addClass('nav-initial');
+      $('nav ul a').css('color','#fff');
+      $('nav a').css('color','#fff');
+      $('.btn-apply').removeClass('btn-apply-inverse');
+      $('.btn-apply').hover(function(){
+        $(this).css("color", "#fff");
+        }, function(){
+        $(this).css("color", "#fff");
     });
-
-    $(window).scroll(function(e){
-	    if($(window).scrollTop() >= (10)){
-	      $('.nav-wrapper').removeClass('nav-initial');
-	      $('.nav-wrapper').addClass('nav-down');
-	      $('nav ul a').css('color','#fff');
-	      $('nav a').css('color','#fff');
-	      $('.btn-apply').addClass('btn-apply-inverse');
-	      $('.btn-apply').hover(function(){
-			    $(this).css("color", "#8DB5E2;");
-			    }, function(){
-			    $(this).css("color", "#000");
-		  });
-	    }
-	    if ($(window).scrollTop() <= (0)){
-	      $('.nav-wrapper').removeClass('nav-down');
-	      $('.nav-wrapper').addClass('nav-initial');
-	      $('nav ul a').css('color','#fff');
-	      $('nav a').css('color','#fff');
-	      $('.btn-apply').removeClass('btn-apply-inverse');
-	      $('.btn-apply').hover(function(){
-			    $(this).css("color", "#fff");
-			    }, function(){
-			    $(this).css("color", "#fff");
-		  });
-	      $('nav ul').children('.link-scroll').removeClass('link-scroll');
-	    }
-	});
+      $('nav ul').children('.link-scroll').removeClass('link-scroll');
+    }
+  });
 </script>
 </body>
 </html>
