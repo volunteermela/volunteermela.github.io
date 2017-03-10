@@ -91,6 +91,24 @@ html[xmlns] .clearfix {
     height: 1%;
 }
 
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search] {
+	border-bottom: 0px;
+	border: 1px solid white;
+	width: 270px;
+	height: auto;
+	padding: 10px;
+	font-family: 'Unica One', cursive;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+input[type=email]:focus:not([readonly]) {
+	border-bottom: 1px solid white;
+	box-shadow: 0 1px 0 0 black;
+}
+
 
 //mixins
 @mixin fade-bg {
@@ -102,7 +120,7 @@ html[xmlns] .clearfix {
 }
 
 //variables
-$font-hd: 'Roboto', sans-serif;
+$font-hd: 'Droid Serif', serif;
 $font-body: 'Roboto', sans-serif;
 $font-try:'Roboto', sans-serif;
 
@@ -110,6 +128,7 @@ $lt-blue: #8DB5E2;
 $dark-blue: #0d47a1;
 $lt-gray: #D8D8D8;
 $med-gray: #616161;
+$green: #76F488;
 $dark-gray: #424242;
 $black: #000;
 $white: #fff;
@@ -138,9 +157,9 @@ $black-border: 2px solid #000;
 	position: absolute;
 	bottom: 40%;
 	animation-name: run;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    transform: scale(1.1); 
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transform: scale(1.1);
 	img {
 		width: 150px;
 	}
@@ -159,6 +178,9 @@ $black-border: 2px solid #000;
 //NAVBAR
 nav {
 	background-color: transparent;
+	background-image: url(change.jpg);
+	background-size: cover;
+	background-position: center;
 	color: white;
 	box-shadow: none;
 	font-family: $font-hd;
@@ -214,29 +236,22 @@ nav ul a:hover {
 	opacity: 0.9;
 }
 
-//logo in navbar
-#nav-logo {
-	width: 30px;
-	position: relative;
-	top: 10px;
-}
+.logo {
+	color: white;
+	padding-left: 10px;
+	letter-spacing: 1.5px;
+	img {
+		width: 50px;
+	}
 
-.btn-apply {
-	border: 2px solid #fff;
-	border-radius: 21px;
-}
-
-#brand-logo {
-	display: inline-block;
-	margin-right: 15px;
-	font-size: 20px;
-	float: left;
-	@media only screen and (max-width: 500px) {
-		float: none;
-		text-align: center;
-		margin: 0 auto;
+	h3 {
+		font-family: 'Unica One', cursive;
+		text-transform: uppercase;
+		margin-left: 5px;
+		font-size: 2em;
 	}
 }
+
 
 #brand-logo-inverse {
 	color: $black;
@@ -259,7 +274,7 @@ nav ul a:hover {
 .landing-container {
   width: 100%;
   height: 100vh;
-  background-image: url(background.png);
+  background-image: url(change.jpg);
   background-size: cover;
   background-position: center;
   font-family: $font-hd;
@@ -278,12 +293,12 @@ nav ul a:hover {
   	text-align: center;
   }
   h1 {
-  	font-size: 5em;
-  	letter-spacing: -3px;
+  	font-size: 40px;
+  	letter-spacing: 0.5px;
+  	line-height: 50px;
   }
   h3 {
   	font-size: 1.8em;
-  	color: $lt-gray;
   }
   .btn {
   	color: white;
@@ -298,114 +313,61 @@ nav ul a:hover {
   }
 }
 
-.modal {
-	top: 25%;
-	width: 35%;
-	padding: 10px 20px;
-	color: black;
-	min-height: 40%;
-	h4 {
-		color: #1F9C37;
-		display: inline-block;
-		position: relative;
-		bottom: 10px;
-		font-size: 22px;
-	}
-	.title {
-		float: left;
-	}
-	p {
-		text-align: justify;
-	}
-	img {
-		width: 35px;
-	}
-	.close-modal {
-		float: right;
-		&:hover {
-			pointer: cursor;
-		}
-	}
-	.modal-footer {
-		border-top: 1px solid #D8D8D8;
-	}
-}
-
-#mc-embedded-subscribe {
-	width: 100%;
-	background-color: #1F9C37;
+#action {
+	text-decoration: underline;
+	transition: background .175s ease-out, color .175s ease-out;
 	color: white;
-	border: none;
-	border-radius: 5px;
-	padding: 10px;
-}
-
-
-.landing-info {
-	display: block;
-	margin: 0 auto;
-	color: black;
-	font-family: $font-hd;
-}
-
-.landing-btn-container {
-	text-align: center;
-}
-
-//about section
-.about-container {
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-	font-family: $font-try;
-	h3 {
-		text-transform: uppercase;
-		font-size: 1.65rem;
+	&:hover {
+		color: #76F488;
 	}
 }
-.about-left {
-	min-height: 60vh;
-	padding: 7%;
-	background-color: $lt-blue;
-}
-.about-right {
-	padding: 7%;
-	min-height: 60vh;
+
+#mce-EMAIL {
+	margin-right: 5px;
 }
 
-.text-center {
-	width: 60%;
+#mc_embed_signup {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
 }
 
-
-//coaches section
-.schedule-container {
-	min-height: 50vh;
-	padding: 50px 10px;
-	.title {
-		text-align: center;
-		p {
-			color: #ACACAC;
-			font-size: 18px;
-		}
-	}
-	h5 {
-		text-align: center;
-	}
-	.steps {
-		padding: 30px;
-		.btn-floating {
-			background-color: #1F9C37;
-			color: white;
-			text-align: center;
-			margin-bottom: 20px;
-			margin-right: 15px;
-		}
-		p {
-			display: inline-block;
-		}
-	}
+#mc_embed_signup div {
+  display: inline-block;
+  float: none;
 }
+
+.mc-field-group {
+    width: 100%;
+    max-width: 270px;
+    display: inline-block;
+}
+
+.button {
+  font-family: 'Unica One', cursive;
+  font-weight: 400;
+  display: inline-block;
+  min-width: 100px;
+  padding: 0.7em 1.5em;
+  background-color: $green;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: background .175s ease-out, color .175s ease-out;
+  transition: background .175s ease-out, color .175s ease-out;
+  border-radius: 0;
+  line-height: 19px;
+  margin-left: 0px;
+  &:hover {
+  	background-color: black;
+  }
+}
+
 
 footer.page-footer {
 	font-family: $font-try;

@@ -82,6 +82,22 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%; }
 
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search] {
+  border-bottom: 0px;
+  border: 1px solid white;
+  width: 270px;
+  height: auto;
+  padding: 10px;
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: 1.2em; }
+
+input[type=email]:focus:not([readonly]) {
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 black; }
+
 .btn-left {
   margin-right: 10px; }
 
@@ -116,9 +132,12 @@ html[xmlns] .clearfix {
 
 nav {
   background-color: transparent;
+  background-image: url(change.jpg);
+  background-size: cover;
+  background-position: center;
   color: white;
   box-shadow: none;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Droid Serif", serif; }
   nav .nav-wrapper {
     padding: 0 10px;
     text-align: center; }
@@ -163,25 +182,17 @@ nav ul a:hover {
   color: #8DB5E2;
   opacity: 0.9; }
 
-#nav-logo {
-  width: 30px;
-  position: relative;
-  top: 10px; }
-
-.btn-apply {
-  border: 2px solid #fff;
-  border-radius: 21px; }
-
-#brand-logo {
-  display: inline-block;
-  margin-right: 15px;
-  font-size: 20px;
-  float: left; }
-  @media only screen and (max-width: 500px) {
-    #brand-logo {
-      float: none;
-      text-align: center;
-      margin: 0 auto; } }
+.logo {
+  color: white;
+  padding-left: 10px;
+  letter-spacing: 1.5px; }
+  .logo img {
+    width: 50px; }
+  .logo h3 {
+    font-family: 'Unica One', cursive;
+    text-transform: uppercase;
+    margin-left: 5px;
+    font-size: 2em; }
 
 #brand-logo-inverse {
   color: #000; }
@@ -199,10 +210,10 @@ nav ul a:hover {
 .landing-container {
   width: 100%;
   height: 100vh;
-  background-image: url(background.png);
+  background-image: url(change.jpg);
   background-size: cover;
   background-position: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Droid Serif", serif;
   color: white;
   text-align: center; }
   .landing-container .logo {
@@ -215,11 +226,11 @@ nav ul a:hover {
   .landing-container h1, .landing-container h3 {
     text-align: center; }
   .landing-container h1 {
-    font-size: 5em;
-    letter-spacing: -3px; }
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    line-height: 50px; }
   .landing-container h3 {
-    font-size: 1.8em;
-    color: #D8D8D8; }
+    font-size: 1.8em; }
   .landing-container .btn {
     color: white;
     border: 1px solid white;
@@ -230,89 +241,52 @@ nav ul a:hover {
     .landing-container .btn:hover {
       background-color: transparent; }
 
-.modal {
-  top: 25%;
-  width: 35%;
-  padding: 10px 20px;
-  color: black;
-  min-height: 40%; }
-  .modal h4 {
-    color: #1F9C37;
-    display: inline-block;
-    position: relative;
-    bottom: 10px;
-    font-size: 22px; }
-  .modal .title {
-    float: left; }
-  .modal p {
-    text-align: justify; }
-  .modal img {
-    width: 35px; }
-  .modal .close-modal {
-    float: right; }
-    .modal .close-modal:hover {
-      pointer: cursor; }
-  .modal .modal-footer {
-    border-top: 1px solid #D8D8D8; }
+#action {
+  text-decoration: underline;
+  transition: background .175s ease-out, color .175s ease-out;
+  color: white; }
+  #action:hover {
+    color: #76F488; }
 
-#mc-embedded-subscribe {
+#mce-EMAIL {
+  margin-right: 5px; }
+
+#mc_embed_signup {
   width: 100%;
-  background-color: #1F9C37;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px; }
-
-.landing-info {
-  display: block;
-  margin: 0 auto;
-  color: black;
-  font-family: "Roboto", sans-serif; }
-
-.landing-btn-container {
-  text-align: center; }
-
-.about-container {
-  width: 100%;
-  margin: 0 auto;
   text-align: center;
-  font-family: "Roboto", sans-serif; }
-  .about-container h3 {
-    text-transform: uppercase;
-    font-size: 1.65rem; }
+  margin-top: 50px; }
 
-.about-left {
-  min-height: 60vh;
-  padding: 7%;
-  background-color: #8DB5E2; }
+#mc_embed_signup div {
+  display: inline-block;
+  float: none; }
 
-.about-right {
-  padding: 7%;
-  min-height: 60vh; }
+.mc-field-group {
+  width: 100%;
+  max-width: 270px;
+  display: inline-block; }
 
-.text-center {
-  width: 60%; }
-
-.schedule-container {
-  min-height: 50vh;
-  padding: 50px 10px; }
-  .schedule-container .title {
-    text-align: center; }
-    .schedule-container .title p {
-      color: #ACACAC;
-      font-size: 18px; }
-  .schedule-container h5 {
-    text-align: center; }
-  .schedule-container .steps {
-    padding: 30px; }
-    .schedule-container .steps .btn-floating {
-      background-color: #1F9C37;
-      color: white;
-      text-align: center;
-      margin-bottom: 20px;
-      margin-right: 15px; }
-    .schedule-container .steps p {
-      display: inline-block; }
+.button {
+  font-family: 'Unica One', cursive;
+  font-weight: 400;
+  display: inline-block;
+  min-width: 100px;
+  padding: 0.7em 1.5em;
+  background-color: #76F488;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: background .175s ease-out, color .175s ease-out;
+  transition: background .175s ease-out, color .175s ease-out;
+  border-radius: 0;
+  line-height: 19px;
+  margin-left: 0px; }
+  .button:hover {
+    background-color: black; }
 
 footer.page-footer {
   font-family: "Roboto", sans-serif;
