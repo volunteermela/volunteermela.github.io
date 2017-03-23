@@ -50,7 +50,7 @@
           <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="enter your email" required>
             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_375208cbc08beadf7e4ca63fc_cc37db272d" tabindex="-1" value=""></div>
-            <div class="clear"><input type="submit" value="Send me volunteer events" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            <div class="clear"><input type="submit" value="Send me volunteer events" name="subscribe" id="mc-embedded-subscribe" class="button" onclick="sendGoogleEvent(event)"></div>
             </div>
         </form>
         </div>
@@ -62,6 +62,16 @@
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" src="js/slide_animation.js"></script>
 <script>
+
+function sendGoogleEvent(event) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Subscription',
+    eventAction: 'subscribe',
+    eventLabel: 'Mailchimp click'
+  });
+}
+
   function hideVolunteerModal(event) {
     ga('send', 'event', 'SUSCRIBE', 'click', 'landing page button');
     $("#modal1").css("display", "none");
