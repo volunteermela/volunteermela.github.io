@@ -47,10 +47,11 @@
   <!-- LANDING PAGE -->
   <div class="landing-container vertical-center">
     <div class="vertical-center--child animation-element">
-      <h1>Make <a id="action">real change</a> and
+      <h1>Connect with <a id="action">local charities</a> and
         <span><br></span>
         improve your community.
       </h1>
+      <h5>Stay tuned for our launch coming soon!</h5>
       <!--<h3>Get volunteering opportunities sent straight to your inbox.</h3>-->
       <div class="landing-btn-container">
         <!-- Begin MailChimp Signup Form -->
@@ -68,12 +69,40 @@
         </div>
         <!--End mc_embed_signup-->
       </div>
+    </div>
   </div><!-- end of landing -->
+  <div class="about-container grey lighten-1">
+    <p><span>VolunteermeLA</span> is a an easy way to find local opportunities to volunteer with individuals that have similar interest. <span>Our goal</span> is to help people spend less time looking for opportunities and more time helping out in their community.</p>
+    <div class="step-container">
+      <div class="step" style="float: left;">
+        <div class="circle">1</div>
+        <span class="text"> Find Volunteers</span>
+      </div>
+      <div class="step">
+        <div class="circle">2</div>
+        <span class="text"> Find Events</span>
+      </div>
+      <div class="step" style="float: right;">
+        <div class="circle">3</div>
+        <span class="text">Make real change</span>
+      </div>
+    </div>
+  </div>
 </div> <!-- end of main container -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" src="js/slide_animation.js"></script>
 <script>
+
+var targetOffset = $(".about-container").offset().top;
+
+var $w = $(window).scroll(function(){
+    if ( $w.scrollTop() > targetOffset ) {   
+        $('nav').css({"color":"black"});
+    } else {
+        $('nav').css({"color":"white"});
+    }
+});
 
 function sendGoogleEvent(event) {
   console.log("event fired");

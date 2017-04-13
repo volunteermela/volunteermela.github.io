@@ -137,7 +137,8 @@ nav {
   background-position: center;
   color: white;
   box-shadow: none;
-  font-family: "Droid Serif", serif; }
+  font-family: "Droid Serif", serif;
+  position: fixed; }
   nav .nav-wrapper {
     padding: 0 10px;
     text-align: center; }
@@ -231,6 +232,8 @@ nav ul a:hover {
     line-height: 50px; }
   .landing-container h3 {
     font-size: 1.8em; }
+  .landing-container h5 {
+    font-size: 1.3em; }
   .landing-container .btn {
     color: white;
     border: 1px solid white;
@@ -240,6 +243,36 @@ nav ul a:hover {
     letter-spacing: 1.5px; }
     .landing-container .btn:hover {
       background-color: transparent; }
+
+.about-container {
+  text-align: center;
+  padding: 70px; }
+  .about-container p {
+    max-width: 60%;
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: justify; }
+  .about-container span {
+    color: #1b5e20; }
+  .about-container .step-container {
+    width: 70%;
+    margin: 50px auto; }
+  .about-container .step {
+    display: inline-block; }
+    .about-container .step .circle {
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      border-radius: 50px;
+      border: 1px solid #1b5e20;
+      margin-right: 0;
+      color: black; }
+    .about-container .step .text {
+      display: inline-block;
+      position: relative;
+      left: 50px;
+      bottom: 25px;
+      color: black; }
 
 #action {
   text-decoration: underline;

@@ -184,6 +184,7 @@ nav {
 	color: white;
 	box-shadow: none;
 	font-family: $font-hd;
+	position: fixed;
 	.nav-wrapper {
 		padding: 0 10px;
 		text-align: center;
@@ -300,6 +301,9 @@ nav ul a:hover {
   h3 {
   	font-size: 1.8em;
   }
+  h5 {
+  	font-size: 1.3em;
+  }
   .btn {
   	color: white;
   	border: 1px solid white;
@@ -311,6 +315,44 @@ nav ul a:hover {
   		background-color: transparent;
   	}
   }
+}
+
+.about-container {
+	text-align: center;
+	padding: 70px;
+	p {
+		max-width: 60%;
+		font-size: 25px;
+		margin: 0 auto;
+		text-align: justify;
+	}
+	span {
+		color: #1b5e20;
+	}
+	.step-container {
+		width: 70%;
+		margin: 50px auto;
+
+	}
+	.step {
+		display: inline-block;
+		.circle {
+			width: 30px;
+			height: 30px;
+			padding: 5px;
+			border-radius: 50px;
+			border: 1px solid #1b5e20;
+			margin-right: 0;
+			color: black;
+		}
+		.text {
+			display: inline-block;
+			position: relative;
+			left: 50px;
+			bottom: 25px;
+			color: black;
+		}
+	}
 }
 
 #action {
